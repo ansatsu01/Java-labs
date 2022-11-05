@@ -31,8 +31,9 @@ public class SecondWindow extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
                 Random random = new Random();
-                noButton.setLocation(random.nextInt(getWidth() - noButton.getWidth()),
-                        label.getHeight() + random.nextInt(getHeight() - (label.getHeight() + noButton.getHeight())));
+                int x = random.nextInt(SecondWindow.this.getWidth() - 2*noButton.getWidth());
+                int y = label.getHeight() + random.nextInt(getHeight() - (label.getHeight() + 2*noButton.getHeight()));
+                noButton.setLocation(x, y);
             }
         });
     }
